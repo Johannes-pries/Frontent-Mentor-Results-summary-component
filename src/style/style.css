@@ -24,3 +24,25 @@ body {
     --Light-lavender: hsl(241, 100%, 89%);
     --Dark-gray-blue: hsl(224, 30%, 27%);
 }
+
+.root {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    height: 20rem;
+    width: 40rem;
+    display: grid;
+    grid-auto-flow: column;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px var(--Pale-blue);
+
+    .left {
+        background: linear-gradient(var(--Light-slate-blue), var(--Light-royal-blue));
+        border-radius: inherit;
+    }
+}
+
+
