@@ -12,9 +12,13 @@ body {
 
 :root {
     --Light-red: hsl(0, 100%, 67%);
+    --Light-red-opacity: hsla(0, 100%, 67%, 0.1);
     --Orangey-yellow: hsl(39, 100%, 56%);
+    --Orangey-yellow-opacity: hsla(39, 100%, 56%, 0.1);
     --Green-teal: hsl(166, 100%, 37%);
+    --Green-teal-opacity: hsla(166, 100%, 37%, 0.1);
     --Cobalt-blue: hsl(234, 85%, 45%);
+    --Cobalt-blue-opacity: hsla(234, 85%, 45%, 0.1);
     --Light-slate-blue /*(background)*/: hsl(252, 100%, 67%);
     --Light-royal-blue /*(background)*/: hsl(241, 81%, 54%);
     --Violet-blue /*(circle)*/: hsla(256, 72%, 46%, 1);
@@ -35,7 +39,6 @@ body {
     height: auto;
     width: 40rem;
     display: grid;
-    grid-auto-flow: column;
     grid-template-columns: repeat(2, 1fr);
     border-radius: 20px;
     box-shadow: 5px 5px 10px var(--Pale-blue);
@@ -74,6 +77,21 @@ body {
             color: var(--Light-lavender);
         }
     }
+
+    .right {
+        padding: 1.5rem 2.2rem;
+        
+        h2 {
+            color: var(--Dark-gray-blue);
+        }
+
+        .area {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            margin-block: 1rem;
+            border-radius: 8px;
+        }
+    }
 }
 
 .score::after {
@@ -83,4 +101,38 @@ body {
     padding: 0;
     margin: 0;
     display: block;
+}
+
+.reaction {
+    background: var(--Light-red-opacity);
+    color: var(--Light-red);
+}
+
+.memory {
+    background: var(--Orangey-yellow-opacity);
+    color: var(--Orangey-yellow);
+}
+
+.verbal {
+    background: var(--Green-teal-opacity);
+    color: var(--Green-teal);
+}
+
+.visual {
+    background: var(--Cobalt-blue-opacity);
+    color: var(--Cobalt-blue);
+}
+
+.icon + h3 {
+    font-size: 1rem;
+}
+
+.btn {
+    background: var(--Dark-gray-blue);
+    width: 100%;
+    padding: .8rem;
+    font-size: 1.1rem;
+    color: var(--Pale-blue);
+    border-radius: 25px;
+    margin-top: 1.5rem;
 }
