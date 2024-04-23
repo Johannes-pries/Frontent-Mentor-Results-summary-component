@@ -147,3 +147,17 @@ body {
     border-radius: 25px;
     margin-top: 1.5rem;
 }
+
+@media(max-width: 786px)
+{
+    .card {
+        grid-template-columns: 1fr;
+        width: clamp(20rem, 70vw, 30rem);
+    }
+}
+
+@media(max-width: 375px) {
+    .card {
+        width: clamp(300px, 100vw, 30rem);
+    }
+}
