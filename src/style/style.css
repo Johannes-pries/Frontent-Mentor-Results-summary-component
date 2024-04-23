@@ -87,7 +87,8 @@ body {
 
         .area {
             display: grid;
-            grid-template-columns: repeat(3,1fr);
+            grid-template-columns: max-content;
+            grid-auto-flow: column;
             margin-block: 1rem;
             border-radius: 8px;
         }
@@ -125,6 +126,16 @@ body {
 
 .icon + h3 {
     font-size: 1rem;
+}
+
+.icon {
+    display: grid;
+    place-content: center;
+    padding: 0 .9rem;
+}
+
+.icon > svg{
+    
 }
 
 .btn {
